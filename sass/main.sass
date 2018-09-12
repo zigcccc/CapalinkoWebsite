@@ -1,0 +1,58 @@
+@import "01-Variables/colors"
+@import "01-Variables/transitions"
+@import "01-Variables/shadows"
+@import "01-Variables/typography"
+@import "02-Components/navbar"
+
+$primary: $brown
+
+@import "node_modules/bulma/bulma"
+
+body
+  min-height: 100vh
+  background: white
+
+.card
+  border: none
+  figure
+    display: flex
+    & > img
+      object-fit: cover
+
+.container
+  @media screen and (max-width: 768px)
+    max-width: 95%
+
+#storitve
+  .column
+    align-self: stretch
+    .card
+      height: 100%
+      border-radius: 10px
+      overflow: hidden
+
+#nagovor
+  margin-top: 50px
+
+#zakljucek
+  margin-top: 75px
+
+footer
+  padding: 1em 1em .5em
+  .info
+    padding: 1em
+    display: flex
+    justify-content: space-around
+    align-items: flex-end
+    @media screen and (max-width: 860px)
+      flex-direction: column
+      align-items: center
+    a
+      color: $brown
+      &:hover
+        color: darken($brown, 5%)
+
+  .legal
+    padding: .5em
+    font-size: .85em
+    text-align: center

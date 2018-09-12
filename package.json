@@ -1,0 +1,36 @@
+{
+  "name": "Website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "parcel -p 8000 index.html",
+    "build": "parcel build index.html --out-dir build",
+    "cm": "git cm"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*js": [
+      "eslint --fix",
+      "git-add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
+  },
+  "dependencies": {
+    "autoprefixer": "^9.1.5",
+    "bulma": "^0.7.1",
+    "node-sass": "^4.9.3",
+    "postcss-modules": "^1.3.2"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.0"
+  }
+}
